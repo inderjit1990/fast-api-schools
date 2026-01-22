@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "formatters": {
+    "default": {
+      "format": "%(asctime)s [%(levelname)s] %(name)s: %(message)s (%(filename)s:%(lineno)d)"
+    }
+  },
+  "handlers": {
+    "file": {
+      "class": "logging.FileHandler",
+      "filename": "school_saas.log",
+      "formatter": "default",
+      "level": "DEBUG"
+    },
+    "console": {
+      "class": "logging.StreamHandler",
+      "formatter": "default",
+      "level": "INFO"
+    }
+  },
+  "root": {
+    "level": "DEBUG",
+    "handlers": ["file", "console"]
+  }
+}
